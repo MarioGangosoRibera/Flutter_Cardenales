@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:parecido_examen/app_drawer.dart';
 import 'database_helper.dart';
 
 class PantallaVotar extends StatefulWidget {
@@ -41,6 +42,7 @@ class _PantallaVotarState extends State<PantallaVotar> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(title: const Text('Votar Cardenal')),
+      drawer: AppDrawer(),
       body: Padding(
         padding: const EdgeInsets.all(16.0),
         child: _cardenales.isEmpty

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:parecido_examen/app_drawer.dart';
 import 'package:provider/provider.dart';
 import 'theme_notifier.dart';
 
@@ -21,6 +22,7 @@ class _PantallaAjustesState extends State<PantallaAjustes> {
 
     return Scaffold(
       appBar: AppBar(title: const Text('Ajustes')),
+      drawer: AppDrawer(),
       body: Padding(
         padding: const EdgeInsets.all(16.0),
         child: Column(

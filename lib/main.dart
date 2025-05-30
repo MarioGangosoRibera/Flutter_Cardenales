@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:parecido_examen/PantallaAjustes.dart';
+import 'package:parecido_examen/PantallaRegistros.dart';
 import 'package:parecido_examen/PantallaVotar.dart';
 import 'package:parecido_examen/theme_notifier.dart';
 import 'package:provider/provider.dart';
