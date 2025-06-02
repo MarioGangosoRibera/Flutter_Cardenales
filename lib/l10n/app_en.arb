@@ -1,0 +1,15 @@
+{
+  "@@locale": "en",
+  "title": "Elections",
+  "menu": "Menu",
+  "vote": "Vote",
+  "registers": "Records",
+  "settings": "Settings",
+  "theme": "Theme",
+  "language": "Language",
+  "voteCardinal": "Vote Cardinal",
+  "selectCardinal": "Select a Cardinal",
+  "voteButton": "Vote",
+  "voteRegistered": "Vote recorded!",
+  "voteResults": "Voting Results"
+}

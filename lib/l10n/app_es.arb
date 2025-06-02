@@ -1,0 +1,15 @@
+{
+  "@@locale": "es",
+  "title": "Elecciones",
+  "menu": "Menú",
+  "vote": "Votar",
+  "registers": "Registros",
+  "settings": "Ajustes",
+  "theme": "Tema",
+  "language": "Idioma",
+  "voteCardinal": "Votar Cardenal",
+  "selectCardinal": "Selecciona un Cardenal",
+  "voteButton": "Votar",
+  "voteRegistered": "¡Voto registrado!",
+  "voteResults": "Resultados de la votación"
+}

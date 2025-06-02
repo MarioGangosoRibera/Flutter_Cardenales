@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart'; // Importa localizaciones
 import 'package:parecido_examen/app_drawer.dart';
 import 'database_helper.dart';
 
@@ -32,17 +33,20 @@ class _PantallaVotarState extends State<PantallaVotar> {
   Future<void> _votar() async {
     if (_idSeleccionado != null) {
       await DatabaseHelper().insertarVoto(_idSeleccionado!);
+      final loc = AppLocalizations.of(context)!;
       ScaffoldMessenger.of(context).showSnackBar(
-        const SnackBar(content: Text('¡Voto registrado!')),
+        SnackBar(content: Text(loc.voteRegistered)),  // ¡Voto registrado!
       );
     }
   }
 
   @override
   Widget build(BuildContext context) {
+    final loc = AppLocalizations.of(context)!;
+
     return Scaffold(
-      appBar: AppBar(title: const Text('Votar Cardenal')),
-      drawer: AppDrawer(),
+      appBar: AppBar(title: Text(loc.voteCardinal)), // "Votar Cardenal"
+      drawer: const AppDrawer(),
       body: Padding(
         padding: const EdgeInsets.all(16.0),
         child: _cardenales.isEmpty
@@ -54,7 +58,7 @@ class _PantallaVotarState extends State<PantallaVotar> {
                       borderRadius: BorderRadius.circular(12),
                     ),
                     child: ListTile(
-                      title: const Text('Selecciona un Cardenal'),
+                      title: Text(loc.selectCardinal), // "Selecciona un Cardenal"
                       trailing: DropdownButton<int>(
                         value: _idSeleccionado,
                         items: _cardenales
@@ -74,7 +78,7 @@ class _PantallaVotarState extends State<PantallaVotar> {
                   const SizedBox(height: 20),
                   ElevatedButton(
                     onPressed: _votar,
-                    child: const Text('Votar'),
+                    child: Text(loc.voteButton),  // "Votar"
                   ),
                 ],
               ),
